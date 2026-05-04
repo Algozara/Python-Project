@@ -1,4 +1,4 @@
-# [Game Title] - Mod the Game: Python Arcade Remix
+# Python Game - Mod the Game: Python Arcade Remix
 
 A collaborative student project modifying an open-source Python Arcade game. This project demonstrates code exploration, collaborative development, and documentation practices used in real software teams.
 
