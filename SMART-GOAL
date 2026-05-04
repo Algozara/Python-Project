@@ -1,0 +1,55 @@
+This is a solid collaborative project that combines code exploration, teamwork, and documentation—perfect for building your portfolio while demonstrating real-world development practices. Here are SMART goals tailored to your situation and learning objectives:
+
+### Team-Level Goals
+
+**Goal 1: Select and Validate Game by Day 2**
+- Specific: Choose an open-source Python Arcade game with accessible code (under 500 lines initially)
+- Measurable: Game runs without errors on all team members' machines
+- Achievable: Use GitHub search or existing Arcade examples
+- Relevant: Ensures smooth exploration phase and reduces debugging delays
+- Time-bound: Complete by end of Day 2
+
+**Goal 2: Complete All Code Changes by Day 5**
+- Specific: Visual change + gameplay change + refactor/comments all implemented
+- Measurable: Each change compiles and runs; changes are observable in gameplay
+- Achievable: Assign clear ownership (Developer 1 handles visuals, Developer 2 handles gameplay)
+- Relevant: Leaves buffer time for integration and testing
+- Time-bound: Finish by end of Day 5
+
+**Goal 3: Deliver Polished README and Documentation by Day 9**
+- Specific: README includes what was changed, why, and how to run it; inline comments explain each modification
+- Measurable: Minimum 3–5 inline comments per change; README has setup instructions and change summary
+- Achievable: Team Lead drafts template, developers add their section details
+- Relevant: Demonstrates communication skills and makes changes transparent for grading
+- Time-bound: Complete by end of Day 9
+
+### Individual Goals (Adjust Based on Your Role)
+
+**If You're Team Lead:**
+- Specific: Set up version control (GitHub), confirm game runs on Day 1, and identify 2–3 code sections for modifications
+- Measurable: Repository created with README template; game launches successfully
+- Achievable: Use GitHub Desktop or command line (familiar from your coursework)
+- Relevant: Builds project management and infrastructure skills
+- Time-bound: Complete setup by Day 2
+
+**If You're Developer (Visual or Gameplay):**
+- Specific: Make one isolated change (e.g., background color or enemy speed) and document it with 3+ inline comments
+- Measurable: Change is visually or functionally observable; code follows PEP 8 style
+- Achievable: Start with a small, low-risk modification before expanding
+- Relevant: Demonstrates code reading and modification skills
+- Time-bound: Finish by end of Day 5
+
+### Presentation Goal
+
+**Goal 4: Deliver Confident 5-Minute Presentation by Dec at 1:30 PM**
+- Specific: Practice presentation script 2 times before the date; demo the game live with before-and-after comparisons
+- Measurable: Stay within 5-minute limit; hit all three talking points (intro, visual change, gameplay change)
+- Achievable: Assign one speaker per role; create a backup laptop with the game ready
+- Relevant: Demonstrates communication and technical confidence
+- Time-bound: Present on Tues, Dec at 1:30 PM
+
+***
+
+**Quick tip:** Since you're pursuing cybersecurity and infrastructure, consider how your role (especially Team Lead) mirrors real IT project management—planning, delegation, and risk mitigation are directly transferable to help desk and sysadmin roles.
+
+What role are you planning to take on your team, or do you need help strategizing how to assign roles based on your team's skill levels?
