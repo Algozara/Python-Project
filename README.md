@@ -1,23 +1,23 @@
-# Python Game - Mod the Game: Python Arcade Remix
+# Snake - Mod the Game: Python Arcade Remix
 
 A collaborative student project modifying an open-source Python Arcade game. This project demonstrates code exploration, collaborative development, and documentation practices used in real software teams.
 
-## Project Overview
+# Project Overview
 
 This team project involved selecting an existing Python Arcade game and making observable changes to visuals, gameplay, and code structure. Our modifications showcase:
 - **Visual Change:** [Brief description, e.g., "Changed background color from blue to purple"]
 - **Gameplay Change:** [Brief description, e.g., "Increased enemy spawn rate by 20%"]
 - **Code Refactor:** [Brief description, e.g., "Added documentation comments to sprite collision detection module"]
 
-## Team Members & Roles
+# Team Members & Roles
 
 | Name | Role | Responsibility |
 |------|------|-----------------|
-| [Team Lead Name] | Team Lead | Game setup, code exploration guide, refactoring, final submission |
-| [Developer 1 Name] | Developer 1 | Visual modification and documentation |
-| [Developer 2 Name] | Developer 2 | Gameplay modification and documentation |
+| [Alexander Gonzalez] | Team Lead | Game setup, code exploration guide, refactoring, final submission |
+| [Alex] | Developer 1 | Visual modification and documentation |
+| [Ale] | Developer 2 | Gameplay modification and documentation |
 
-## Installation & Setup
+# Installation & Setup
 
 ### Prerequisites
 - Python 3.8 or higher
@@ -46,7 +46,7 @@ This team project involved selecting an existing Python Arcade game and making o
    python main.py
    ```
 
-## Project Changes
+# Project Changes
 
 ### 1. Visual Change - [Developer 1]
 
@@ -94,7 +94,7 @@ spawn_rate = 0.6  # Increased spawn frequency by 20% for more challenge
 
 ---
 
-### 3. Code Refactor - [Team Lead]
+### 3. Code Refactor - [Team Lead Alex]
 
 **What was changed:**
 - [Description of refactoring or documentation added]
@@ -125,7 +125,7 @@ def check_collision(sprite1, sprite2):
 
 ---
 
-## File Structure
+# File Structure
 
 ```
 [repo-name]/
@@ -138,7 +138,7 @@ def check_collision(sprite1, sprite2):
 └── [other project files]
 ```
 
-## Testing
+# Testing
 
 To verify all changes work correctly:
 
@@ -147,22 +147,23 @@ To verify all changes work correctly:
 3. Test gameplay change: [Specific test steps]
 4. Check for errors: [Any edge cases to watch for]
 
-## Original Game Source
+# Original Game Source
 
-- **Original Game:** [Game name and link to original repository]
-- **License:** [Original license, e.g., MIT]
+- Original Game: [Game name and link to original repository]
+- License: [Original license, e.g., MIT]
 - **Attribution:** This project modifies the original [Game Name] created by [Original Author]
 
-## Technical Details
 
-- **Language:** Python 3.x
-- **Framework:** Arcade (Python game library)
-- **Development Time:** ~10 class days (collaborative project)
-- **Original Code Size:** ~[X] lines
-- **Modified Code Size:** ~[Y] lines
-- **Changes Made:** 3 modifications (1 visual, 1 gameplay, 1 refactor)
+# Technical Details
 
-## How to Present This Project
+- Language: Python 3.x
+- Framework: Arcade (Python game library)
+- Development Time: ~10 class days (collaborative project)
+- Original Code Size: ~[X] lines
+- Modified Code Size: ~[Y] lines
+- Changes Made: 3 modifications (1 visual, 1 gameplay, 1 refactor)
+
+# How to Present This Project
 
 Each team member will present their portion (5 minutes total):
 
@@ -172,7 +173,7 @@ Each team member will present their portion (5 minutes total):
 
 **Pro tip:** Practice running the game smoothly and have before-and-after descriptions ready.
 
-## Learning Outcomes Achieved
+# Learning Outcomes Achieved
 
 - ✅ Navigated and understood an existing Python codebase
 - ✅ Made observable, intentional changes to code and assets
@@ -180,14 +181,14 @@ Each team member will present their portion (5 minutes total):
 - ✅ Documented and explained modifications clearly
 - ✅ Presented technical work to an audience
 
-## Stretch Goals (Optional Enhancements)
+# Stretch Goals (Optional Enhancements)
 
 - [ ] Added sound effects to gameplay
 - [ ] Modified game title or splash screen
 - [ ] Implemented a new scoring rule or bonus system
 - [ ] Packaged game for easy sharing
 
-## Troubleshooting
+# Troubleshooting
 
 **Game won't start:**
 - Ensure Python 3.8+ is installed: `python --version`
@@ -201,7 +202,7 @@ Each team member will present their portion (5 minutes total):
 - Close other programs to free up system resources
 - Check game frame rate in-game (typically displays in console)
 
-## Contributing
+# Contributing
 
 This is a class project, but if you'd like to make additional improvements:
 1. Fork the repository
@@ -210,12 +211,12 @@ This is a class project, but if you'd like to make additional improvements:
 4. Push to branch: `git push origin improvement/feature-name`
 5. Open a Pull Request
 
-## License
+# License
 
 This project modifies [Original Game Name] which is licensed under [Original License].
 Our modifications are available for educational purposes.
 
-## Acknowledgments
+# Acknowledgments
 
 - Original game creator: [Original Author Name]
 - Instructor: [Instructor Name]
