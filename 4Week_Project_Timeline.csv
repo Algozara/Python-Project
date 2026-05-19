@@ -1,99 +1,47 @@
 Date,Day Number,Task Title,Daily Focus (4 hrs),Assigned To
-"Monday, May 4",Day 1,Team Setup & Game Selection (4 hrs),"- Team meeting (30 min): Discuss goals, assign roles, establish communication
-- Research open-source Python Arcade games (1.5 hrs): Star Wars, Space Shooter, Flappy Bird, etc.
-- Choose game & download (30 min): Test on all team members' machines
-- Create GitHub repo & add README template (1 hr)
-- Initial setup complete: Game runs on all machines",Team Lead
-"Tuesday, May 5",Day 2,Code Exploration & Planning (4 hrs),"- All team members: Clone repo & run game locally (30 min)
-- Team Lead: Create project directory structure, add requirements.txt (1 hr)
-- Map out codebase: Identify where visuals, gameplay, sprites are defined (1.5 hrs)
-- Plan modifications: Decide exactly what changes each dev will make (1 hr)
-- Document initial findings in shared doc",All Team
-"Wednesday, May 6",Day 3,Role-Specific Prep (4 hrs),"- Developer 1: Identify visual asset files & color variables (1.5 hrs)
-- Developer 2: Locate gameplay logic & speed/scoring variables (1.5 hrs)
-- Team Lead: Document code sections, create dev guide (1 hr)
-- All: Attend class & discuss project if applicable (flexible)",Developers
-"Thursday, May 7",Day 4,Sprint Planning & Git Workflow (4 hrs),"- Team Lead: Set up Git branches for each developer (30 min)
-- All team: Git workflow training - commits, branches, merging (1.5 hrs)
-- Developer 1: Create feature branch for visual changes (30 min)
-- Developer 2: Create feature branch for gameplay changes (30 min)
-- Team Lead: Document code review checklist in README (1 hr)",All Team
-"Friday, May 8",Day 5,Buffer & Documentation (4 hrs),"- Review Week 1 progress (30 min)
-- Each dev: Write pseudocode for their modifications (1.5 hrs)
-- Team Lead: Update README with team structure, initial findings (1 hr)
-- Test game one more time on all machines (1 hr)
-- Prepare Week 2 sprint checklist",All Team
-"Monday, May 11",Day 6,Developer 1: Start Visual Modification (4 hrs),"- Review visual code section (30 min)
-- Make first visual change (e.g., background color) (1.5 hrs)
-- Test change in-game (1 hr)
-- Document change with inline comments (1 hr)
-- Commit to feature branch",Developer 1
-"Tuesday, May 12",Day 7,Developer 2: Start Gameplay Modification (4 hrs),"- Review gameplay code section (30 min)
-- Make first gameplay change (e.g., enemy speed or scoring) (1.5 hrs)
-- Test change during gameplay (1 hr)
-- Document change with inline comments (1 hr)
-- Commit to feature branch",Developer 2
-"Wednesday, May 13",Day 8,Refinement & Testing (4 hrs),"- Developer 1: Refine visual change, test on different screen sizes (1.5 hrs)
-- Developer 2: Refine gameplay change, test edge cases (1.5 hrs)
-- Team Lead: Code review both changes, check comments (1 hr)
-- All: Sync up, discuss progress & blockers (30 min)",All Team
-"Thursday, May 14",Day 9,Team Lead: Code Refactor (4 hrs),"- Identify code section needing refactoring (30 min)
-- Add documentation/comments to function (1.5 hrs)
-- Improve code clarity (organize variables, better naming) (1.5 hrs)
-- Create feature branch & commit changes (30 min)
-- Attend class & milestone check-in if applicable",Team Lead
-"Friday, May 15",Day 10,Integration & Standup Prep (4 hrs),"- Test game with ALL changes integrated (1 hr)
-- Fix any merge conflicts or compatibility issues (1 hr)
-- Create a test checklist document (30 min)
-- Prepare standup presentation for instructor (1.5 hrs)
-- Sprint retrospective: What went well, what needs work",All Team
-"Monday, May 18",Day 11,Standup Meeting & Testing (4 hrs),"- Standup meeting with instructor Shay (30 min - 1 hr)
-- Address feedback from standup (1 hr)
-- Comprehensive game testing: Visual + Gameplay + Refactor (1 hr)
-- Test on different systems if possible (30 min)
-- Document any bugs found",All Team
-"Tuesday, May 19",Day 12,Documentation Polish Phase 1 (4 hrs),"- Developer 1: Write detailed description of visual change (1 hr)
-- Developer 2: Write detailed description of gameplay change (1 hr)
-- Team Lead: Create before-and-after code snippets (1 hr)
-- Add screenshots or descriptions of changes (1 hr)
-- Review README for clarity",All Team
-"Wednesday, May 20",Day 13,Documentation Polish Phase 2 (4 hrs),"- Write comprehensive testing section (30 min)
-- Create troubleshooting guide (1 hr)
-- Verify all file paths & instructions work (1 hr)
-- Final README review & edits (1.5 hrs)
-- Ensure all inline code comments are complete",All Team
-"Thursday, May 21",Day 14,Presentation Prep Phase 1 (4 hrs),"- Team Lead: Prepare intro slides (game overview, team roles) (1.5 hrs)
-- Developer 1: Prepare visual change demo script (1 hr)
-- Developer 2: Prepare gameplay change demo script (1 hr)
-- All: Practice individual 1-2 min sections (30 min)
-- Attend class & continue with coursework",All Team
-"Friday, May 22",Day 15,Buffer & Final Checks (4 hrs),"- Full game playthrough on presentation computer (1 hr)
-- Test all modifications work as expected (1 hr)
-- Confirm GitHub repo is up-to-date (30 min)
-- Check that game runs without errors (1.5 hrs)
-- Prepare emergency backup (USB, cloud backup)",All Team
-"Monday, May 25",Day 16,Presentation Prep Phase 2 (4 hrs),"- Full team presentation run-through (2 hrs)
-- Time each section - stay within 5-minute total (30 min)
-- Polish delivery & speaking clarity (1 hr)
-- Get feedback from peers or mentor (30 min)
-- Adjust based on feedback",All Team
-"Tuesday, May 26",Day 17,Final Code Review & Quality Check (4 hrs),"- Code quality review: PEP 8 compliance, clear naming (1 hr)
-- Ensure all inline comments are helpful & clear (1 hr)
-- Final testing run: Game stability & all changes visible (1 hr)
-- Create final commit with message 'Project complete' (30 min)
-- Tag release version (v1.0)",Team Lead
-"Wednesday, May 27",Day 18,Presentation Dry Run (4 hrs),"- Full dress rehearsal with timing (2 hrs)
-- Test game launch on presentation computer (1 hr)
-- Prepare contingency plan if tech fails (30 min)
-- Finalize any last-minute edits (30 min)
-- Mental preparation for presentation",All Team
-"Thursday, May 28",Day 19,Final Documentation & Submission (4 hrs),"- Final README review & GitHub check (1 hr)
-- Verify project meets all technical requirements (1 hr)
-- Create submission checklist document (30 min)
-- Submit final project to instructor (30 min)
-- Prepare reflection statements for grading",All Team
-"Friday, May 29",Day 20,Presentation Day! (4 hrs),"- Arrive early, test game one final time (1 hr)
-- Demo the game to any interested classmates pre-presentation (1 hr)
-- Give 5-minute presentation to class (5 min) ← This is the actual presentation
-- Answer Q&A from instructor/classmates (15 min)
-- Celebrate! Document lessons learned (1.5 hrs remaining)",All Team
+"Tuesday, May 19",Day 1,GitHub Setup & README (4 hrs),"- Fix ReadMe.py to README.md (30 min)
+- Paste in full README content (30 min)
+- Confirm Snake_Game.py is uploaded correctly (30 min)
+- Read through Snake_Game.py top to bottom (1.5 hrs)
+- Note which lines handle visuals vs gameplay (1 hr)",Alexander (Team Lead)
+"Wednesday, May 20",Day 2,Code Exploration (4 hrs),"- Identify where colors and visuals are defined (1 hr)
+- Identify where speed and scoring are defined (1 hr)
+- Plan exactly what visual change to make (1 hr)
+- Plan exactly what gameplay change to make (1 hr)
+- Write notes in a comment block at top of Snake_Game.py",Alexander (Team Lead)
+"Thursday, May 21",Day 3,Visual Change (4 hrs),"- Make visual modification (color, background, snake appearance) (1.5 hrs)
+- Test it runs correctly (30 min)
+- Add inline comments explaining the change (1 hr)
+- Commit to GitHub with message: Add visual change (1 hr)",Developer 1
+"Friday, May 22",Day 4,Gameplay Change (4 hrs),"- Add SPACE bar restart feature (1.5 hrs)
+- Add one gameplay change (speed increase or scoring rule) (1 hr)
+- Test both changes work correctly (30 min)
+- Add inline comments explaining changes (30 min)
+- Commit to GitHub with message: Add gameplay changes and SPACE restart",Developer 2
+"Saturday, May 23",Day 5,Buffer & Catch-Up (4 hrs),"- Review all changes made so far (30 min)
+- Fix any bugs found during testing (1 hr)
+- Update README Changes Made So Far section (1.5 hrs)
+- Commit README updates to GitHub (1 hr)",All Team
+"Monday, May 26",Day 6,Code Refactor (4 hrs),"- Add full docstrings to move() function (30 min)
+- Add full docstrings to draw() function (30 min)
+- Add full docstrings to change_direction() function (30 min)
+- Add full docstrings to reset_game() function (30 min)
+- Clean up variable names and spacing - commit to GitHub (2 hrs)",Alexander (Team Lead)
+"Tuesday, May 27",Day 7,Stretch Goal: Sound (4 hrs),"- Research pygame.mixer for background music (1 hr)
+- Install pygame: pip install pygame (15 min)
+- Add background music or food eaten sound effect (1.5 hrs)
+- Test sound works without crashing game (45 min)
+- Document change and commit to GitHub (30 min)",All Team
+"Wednesday, May 28",Day 8,Stretch Goal #2 (4 hrs),"- Choose second stretch goal: bonus points, high score, or splash screen (30 min)
+- Implement the chosen stretch goal (2 hrs)
+- Test it runs cleanly (30 min)
+- Add inline comments and commit to GitHub (1 hr)",All Team
+"Thursday, May 29",Day 9,Full Documentation (4 hrs),"- Update README with all completed changes (1 hr)
+- Add before/after code snippets for each change (1 hr)
+- Fill in testing table with pass/fail results (30 min)
+- Verify attribution section credits ImKennyYip correctly (30 min)
+- Final README review and commit (1 hr)",Alexander (Team Lead)
+"Friday, May 30",Day 10,Testing & Polish (4 hrs),"- Full playthrough: test all features work together (1 hr)
+- Fix any remaining bugs (1 hr)
+- PEP 8 code cleanup: spacing, naming, formatting (1 hr)
+- Final README check - make sure everything is 
