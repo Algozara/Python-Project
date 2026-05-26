@@ -7,6 +7,7 @@ TILE_SIZE = 25
 
 WINDOWS_WIDTH = TILE_SIZE * ROWS
 WINDOWS_HEIGHT = TILE_SIZE * COLS
+PANEL_HEIGHT = 40  # Bottom status panel height
 
 class Tile:
     def __init__(self, x, y):
@@ -20,17 +21,23 @@ window.resizable(False, False)
 
 canvas = tkinter.Canvas(window, bg= "black", width=WINDOWS_WIDTH, height=WINDOWS_HEIGHT, borderwidth=0, highlightthickness=0)
 canvas.pack()
+# Bottom status panel
+status_panel = tkinter.Frame(window, bg="#1a1a1a", width=WINDOWS_WIDTH, height=PANEL_HEIGHT)
+status_panel.pack(fill="x")
+status_panel.pack_propagate(False)
+score_label = tkinter.Label(status_panel, text="Score: 0", font=("Arial", 12, "bold"),fg="chartreuse", bg="#1a1a1a")
+score_label.pack(side="left", padx=12, pady=8)
+tip_label = tkinter.Label(status_panel, text="Use Arrow Keys to move",font=("Arial", 10), fg="#888888", bg="#1a1a1a")
+tip_label.pack(side="right", padx=12, pady=8)
 window.update()
 
 #center the window
-screen_width = window.winfo_width()
-screen_height = window.winfo_height()
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
 
 window_x = int((screen_width / 2) - (WINDOWS_WIDTH / 2))
-window_y = int((screen_height / 2) - (WINDOWS_HEIGHT / 2))
-window.geometry(f"{WINDOWS_WIDTH}x{WINDOWS_HEIGHT}+{window_x}+{window_y}")
+window_y = int((screen_height / 2) - ((WINDOWS_HEIGHT + PANEL_HEIGHT) / 2))
+window.geometry(f"{WINDOWS_WIDTH}x{WINDOWS_HEIGHT + PANEL_HEIGHT}+{window_x}+{window_y}")
 
 #initialize game
 snake = Tile(5*TILE_SIZE, 5*TILE_SIZE) #single tile snake's head
@@ -115,11 +122,14 @@ def draw():
     for tile in snake_body:
         canvas.create_rectangle(tile.x, tile.y, tile.x + TILE_SIZE, tile.y + TILE_SIZE, fill="green")
 
-    if (game_over):
+   if (game_over):
         canvas.create_text(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2, font = "Arial, 20", text = f"Game Over: {score}", fill ="white")
-    else:
         canvas.create_text(30, 20, font = "Arial 10", text = f"Score: {score}", fill="white")
-
+        score_label.config(text=f"Final Score: {score}", fg="crimson")
+        trip_label.config(text="Game Over!", fg="crimson")
+    else:
+        score_label.config(text=f"Score: {score}")
+        
     window.after(100, draw) #100ms = 1/10 second, 10 frames per second
 
 draw()
