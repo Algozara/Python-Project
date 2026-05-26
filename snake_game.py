@@ -27,6 +27,7 @@ status_panel.pack(fill="x")
 status_panel.pack_propagate(False)
 score_label = tkinter.Label(status_panel, text="Score: 0", font=("Arial", 12, "bold"),fg="chartreuse", bg="#1a1a1a")
 score_label.pack(side="left", padx=12, pady=8)
+
 tip_label = tkinter.Label(status_panel, text="Use Arrow Keys to move",font=("Arial", 10), fg="#888888", bg="#1a1a1a")
 tip_label.pack(side="right", padx=12, pady=8)
 window.update()
@@ -114,22 +115,22 @@ def draw():
     canvas.delete("all")
 
     #draw food
-    canvas.create_rectangle(food.x, food.y, food.x + TILE_SIZE, food.y + TILE_SIZE, fill="red")
+    canvas.create_rectangle(food.x, food.y, food.x + TILE_SIZE, food.y + TILE_SIZE, fill="crimson")
 
     #draw snake
-    canvas.create_rectangle(snake.x, snake.y, snake.x + TILE_SIZE, snake.y + TILE_SIZE, fill="green")
+    canvas.create_rectangle(snake.x, snake.y, snake.x + TILE_SIZE, snake.y + TILE_SIZE, fill="chartreuse")
 
     for tile in snake_body:
-        canvas.create_rectangle(tile.x, tile.y, tile.x + TILE_SIZE, tile.y + TILE_SIZE, fill="green")
+        canvas.create_rectangle(tile.x, tile.y, tile.x + TILE_SIZE, tile.y + TILE_SIZE, fill="chartreuse")
 
-   if (game_over):
+    if (game_over):
         canvas.create_text(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2, font = "Arial, 20", text = f"Game Over: {score}", fill ="white")
         canvas.create_text(30, 20, font = "Arial 10", text = f"Score: {score}", fill="white")
         score_label.config(text=f"Final Score: {score}", fg="crimson")
         trip_label.config(text="Game Over!", fg="crimson")
     else:
         score_label.config(text=f"Score: {score}")
-        
+
     window.after(100, draw) #100ms = 1/10 second, 10 frames per second
 
 draw()
