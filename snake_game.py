@@ -49,6 +49,31 @@ snake_body = [] #multiple tile snake's body
 game_over = False
 score = 0
 
+def reset_game():
+    global snake, food, snake_body, game_over, score, velocityX, velocityY
+
+    # Reset main flags and score
+    game_over = False
+    score = 0
+
+    # Reset snake head position
+    snake = Tile(5 * TILE_SIZE, 5 * TILE_SIZE)
+
+    # Clear and reset snake body
+    snake_body = []
+
+    # Reset movement direction (stopped)
+    velocityX = 0
+    velocityY = 0
+
+    # Reset food position
+    food.x = random.randint(0, COLS - 1) * TILE_SIZE
+    food.y = random.randint(0, ROWS - 1) * TILE_SIZE
+
+    # Reset bottom labels
+    score_label.config(text="Score: 0", fg="chartreuse")
+    tip_label.config(text="Use Arrow Keys to move", fg="#888888")
+
 
 def change_direction(e): #e = event
     # print(e)
@@ -71,6 +96,10 @@ def change_direction(e): #e = event
         velocityX = 1
         velocityY = 0
 
+def handle_space(event):
+    # Only restart if the game is currently over
+    if game_over:
+        reset_game()
 
 def move():
     global snake, food, snake_body, game_over, score
@@ -126,8 +155,9 @@ def draw():
     if (game_over):
         canvas.create_text(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2, font = "Arial, 20", text = f"Game Over: {score}", fill ="white")
         canvas.create_text(30, 20, font = "Arial 10", text = f"Score: {score}", fill="white")
+        
         score_label.config(text=f"Final Score: {score}", fg="crimson")
-        trip_label.config(text="Game Over!", fg="crimson")
+        tip_label.config(text="Game Over!", fg="crimson")
     else:
         score_label.config(text=f"Score: {score}")
 
@@ -135,4 +165,5 @@ def draw():
 
 draw()
 window.bind("<KeyRelease>", change_direction) #KeyRelease event is triggered when a key is released, and the change_direction function will be called with the event as an argument
+window.bind("<space>", handle_space)
 window.mainloop()
