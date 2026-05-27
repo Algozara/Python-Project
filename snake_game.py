@@ -1,5 +1,7 @@
 import tkinter
 import random
+import winsound
+import threading
 
 ROWS = 25
 COLS = 25
@@ -25,7 +27,7 @@ canvas.pack()
 status_panel = tkinter.Frame(window, bg="#1a1a1a", width=WINDOWS_WIDTH, height=PANEL_HEIGHT)
 status_panel.pack(fill="x")
 status_panel.pack_propagate(False)
-score_label = tkinter.Label(status_panel, text="Score: 0", font=("Arial", 12, "bold"),fg="chartreuse", bg="#1a1a1a")
+score_label = tkinter.Label(status_panel, text="Score: 0 | Best: 0", font=("Arial", 12, "bold"),fg="chartreuse", bg="#1a1a1a")
 score_label.pack(side="left", padx=12, pady=8)
 
 tip_label = tkinter.Label(status_panel, text="Use Arrow Keys to move",font=("Arial", 10), fg="#888888", bg="#1a1a1a")
@@ -48,6 +50,26 @@ velocityY = 0
 snake_body = [] #multiple tile snake's body
 game_over = False
 score = 0
+high_score = 0
+
+def load_high_score():
+    global high_score
+    try:
+        with open("high_score.txt", "r") as f:
+            high_score = int(f.read())
+    except:
+        high_score = 0
+    
+load_high_score()
+
+def save_high_score():
+    with open("high_score.txt", "w") as f:
+            f.write(str(high_score))
+
+def play_eat_sound():
+    def _play():
+        winsound.Beep(600, 80)  # 600hz tone, 80ms
+    threading.Thread(target=_play, daemon=True).start()
 
 def reset_game():
     global snake, food, snake_body, game_over, score, velocityX, velocityY
@@ -71,7 +93,7 @@ def reset_game():
     food.y = random.randint(0, ROWS - 1) * TILE_SIZE
 
     # Reset bottom labels
-    score_label.config(text="Score: 0", fg="chartreuse")
+    score_label.config(text=f"Score: 0 | Best: {high_score}", fg="chartreuse")
     tip_label.config(text="Use Arrow Keys to move", fg="#888888")
 
 
@@ -102,7 +124,7 @@ def handle_space(event):
         reset_game()
 
 def move():
-    global snake, food, snake_body, game_over, score
+    global snake, food, snake_body, game_over, score, high_score
     if (game_over):
         return
     
@@ -122,6 +144,10 @@ def move():
         food.x = random.randint(0, COLS-1) * TILE_SIZE
         food.y = random.randint(0, ROWS-1) * TILE_SIZE
         score += 1
+        play_eat_sound()
+        if score > high_score:
+            high_score = score
+            save_high_score()
 
     #update the snake's body
     for i in range(len(snake_body)-1, -1, -1):
@@ -149,6 +175,7 @@ def draw():
     #draw snake
     canvas.create_rectangle(snake.x, snake.y, snake.x + TILE_SIZE, snake.y + TILE_SIZE, fill="chartreuse")
 
+    #draw snake body
     for tile in snake_body:
         canvas.create_rectangle(tile.x, tile.y, tile.x + TILE_SIZE, tile.y + TILE_SIZE, fill="chartreuse")
 
@@ -156,10 +183,10 @@ def draw():
         canvas.create_text(WINDOWS_WIDTH/2, WINDOWS_HEIGHT/2, font = "Arial, 20", text = f"Game Over: {score}", fill ="white")
         canvas.create_text(30, 20, font = "Arial 10", text = f"Score: {score}", fill="white")
         
-        score_label.config(text=f"Final Score: {score}", fg="crimson")
-        tip_label.config(text="Game Over!", fg="crimson")
+        score_label.config(text=f"Final Score: {score} | Best: {high_score}", fg="crimson")
+        tip_label.config(text="Game Over! Press SPACE to restart.", fg="crimson")
     else:
-        score_label.config(text=f"Score: {score}")
+        score_label.config(text=f"Score: {score} | Best: {high_score}")
 
     window.after(100, draw) #100ms = 1/10 second, 10 frames per second
 
