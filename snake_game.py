@@ -51,6 +51,7 @@ snake_body = [] #multiple tile snake's body
 game_over = False
 score = 0
 high_score = 0
+paused = False
 
 def load_high_score():
     global high_score
@@ -72,11 +73,12 @@ def play_eat_sound():
     threading.Thread(target=_play, daemon=True).start()
 
 def reset_game():
-    global snake, food, snake_body, game_over, score, velocityX, velocityY
+    global snake, food, snake_body, game_over, score, velocityX, velocityY, paused
 
     # Reset main flags and score
     game_over = False
     score = 0
+    paused = False
 
     # Reset snake head position
     snake = Tile(5 * TILE_SIZE, 5 * TILE_SIZE)
@@ -123,9 +125,25 @@ def handle_space(event):
     if game_over:
         reset_game()
 
+def handle_pause(event):
+    global paused
+
+    # Do not allow pausing if the game is over
+    if game_over:
+        return
+    
+    # Toggle the paused flag
+    paused = not paused
+
+    # Update the bottom label
+    if paused:
+        tip_label.config(text="Game Paused. Press 'P' to resume.", fg="yellow")
+    else:
+        tip_label.config(text="Use Arrow Keys to move", fg="#888888")
+
 def move():
-    global snake, food, snake_body, game_over, score, high_score
-    if (game_over):
+    global snake, food, snake_body, game_over, score, high_score, paused
+    if game_over or paused:
         return
     
     if(snake.x <0 or snake.x >= WINDOWS_WIDTH or snake.y < 0 or snake.y >= WINDOWS_HEIGHT):
@@ -191,6 +209,8 @@ def draw():
     window.after(100, draw) #100ms = 1/10 second, 10 frames per second
 
 draw()
-window.bind("<KeyRelease>", change_direction) #KeyRelease event is triggered when a key is released, and the change_direction function will be called with the event as an argument
+window.bind("<KeyPress>", change_direction) #KeyRelease event is triggered when a key is released, and the change_direction function will be called with the event as an argument
 window.bind("<space>", handle_space)
+window.bind("p", handle_pause)
+window.bind("P", handle_pause)
 window.mainloop()
