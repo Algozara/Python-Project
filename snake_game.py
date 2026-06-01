@@ -1,3 +1,8 @@
+# Intro Python
+# Dev: Alexander Gonzalez
+# Class: Python 210, Instructor: Joseph Kauer
+# This project is a class project which does modification a python script, python 3.18, hosted on github
+
 import tkinter
 import random
 import winsound
